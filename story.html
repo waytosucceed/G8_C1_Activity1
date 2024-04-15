@@ -1,0 +1,165 @@
+<html>
+    <head> <title>G5 trial</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <style>
+            p{
+                font-size:30px;
+                margin-top:10%;
+                font-weight: bold;
+                align-items: center;
+            }
+
+            .maindiv{
+                border: 5px rgb(164, 246, 229) ridge;
+                border-radius: 20px;
+            }
+
+            #nextbtn, #backbtn{
+                width: 30%;
+                font-size:30px;
+                margin-right: 5%
+            }
+
+            #backbtn,#newbtn{
+                display:none;
+            }
+            
+
+            #family{
+                width:95%;
+                height:95%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            .imgdiv{
+                width:500px;
+                height:450px;
+            }
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+            #story{
+                font-size: 22px;
+                border-radius: 20px;
+            }
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about"> What are we learning today?</h2>
+         <div class="maindiv container">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                <img id="family" src="Assests/1.jpg"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" style= "height: 450px;">
+                <p id="story" style="text-align:left; width:110%"> 
+                    Nouns, also called naming words. They are used to name people, places, animals, objects and ideas.
+                    <br>
+                    <u>People</u>:  woman, man, Juanita Brown, uncle <br>
+                    <u>Places</u>: planet, Texas, farm, high school<br>
+                    <u>Animals/ Birds/ Reptiles etc.</u>: dolphin, parrot, lion, lizard<br>
+                    <u>THING</u>:  blackboard, Cupboard, bookmark <br>
+                    <u>IDEA</u>: success, affection, freedom, courage
+                </p> 
+            </div>
+        </div>
+        <br>
+        <div class="" style="text-align:center; padding-top:1%">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+
+        </div>
+        </center>   
+
+        <script>
+
+            var images = ["Assests/2.jpg", "Assests/3.jpg", "Assests/4.jpg", "Assests/5.jpg", "Assests/6.jpg", "Assests/7.jpg","Assests/8.jpg", "Assests/9.jpg", "Assests/10.jpg", "Assests/11.jpg", "Assests/12.jpg","Assests/13.jpg"];
+            
+            var para=["In 1996, a loggerhead turtle called Adelita swam across 9,000 miles from Mexico to Japan, crossing the entire Pacific on her way. Wallace J. Nichols tracked this epic journey with a satellite tag. But Adelita herself had no such technology at her disposal. How did she steer a route across two oceans to find her destination?",
+            "Nathan Putman has the answer. By testing hatchling turtles in a special tank, he has found that they can use the Earth’s magnetic field as their own Global Positioning System (GPS). By sensing the field, they can work out both their latitude and longitude and head in the right direction.",
+            "Putman works in the lab of Ken Lohmann, who has been studying the magnetic abilities of loggerheads for over 20 years. In his lab at the University of North Carolina, Lohmann places hatchlings in a large water tank surrounded by a large grid of electromagnetic coils. In 1991, he found that the babies started swimming in the opposite direction if he used the coils to reverse the direction of the magnetic field around them.",
+            "<img src='pic2.jpg' class='img-fluid' style=width:65%;>",
+            "They could use the field as a compass to get their bearing. Later, Lohmann showed that they can also use the magnetic field to work out their position. For them, this is literally a matter of life or death. Hatchlings born off the sea coast of Florida spend their early lives in the North Atlantic gyre, a warm current that circles between North America and Africa. If they’re swept towards the cold waters outside the gyre, they die. Their magnetic sense keeps them safe.",
+            "Using his coil-surrounded tank, Lohmann could mimic the magnetic field at different parts of the Earth’s surface. If he simulated the field at the northern edge of the gyre, the hatchlings swam southwards. If he simulated the field at the gyre’s southern edge, the turtles swam west-northwest.",
+            "These experiments showed that the turtles can use their magnetic sense to work out their latitude—their position on a north south axis. Now, Putman has shown that they can also determine their longitude—their position on an east-west axis.",
+            "Now we will look into numbers in nouns.<br>Nouns can also be categorized as singular or plural, depending upon how many persons, places, things, or ideas it represents. Most nouns can take either a singular or a plural form, depending upon whether they name one person, place, thing, or idea or more than one. So, nouns can be either singular or plural.",
+            "<img src='pic3.jpg' style=width:65%>",
+            "<img src='pic4.jpg' style=width:65%>",
+            "<img src='pic5.jpg' style=width:65%>",
+            "<h3>Theme and Explanation:<h3> <ol style='font-size:16px'> The story of Adelita, the turtle, teaches us important lessons: <li>Adapting to Challenges: Adelita's incredible journey without fancy gadgets shows how animals can adapt and survive in tough situations.</li> <li>Learning from Nature: Scientists like Nathan Putman and Ken Lohmann study nature to understand how animals like turtles use the Earth's magnetic field to find their way. It's like having a built-in GPS! </li> <li>Respecting Wildlife: Adelita's story reminds us to respect animals and their habitats. By protecting creatures like turtles, we help keep the balance in nature.</li> <li>Never Giving Up: Scientists spend years studying turtles to learn more about them. Their dedication teaches us the value of persistence and hard work in understanding the world around us.</li> <li>We can observe that Adelita's journey and the scientists' research show us how amazing nature is and why it's essential to take care of it.</li>"
+            ]
+                            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("about").innerHTML="How do turtles find their direction?"
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="none"
+                    document.getElementById("family").src = "Assests/last.jpg";
+                    document.getElementById("story").style.fontSize="45px"
+                    document.getElementById("story").style.backgroundColor="rgb(108, 209, 238)"
+                    document.getElementById("story").style.textAlign="center"
+                document.getElementById("story").innerHTML = "Well Done!";
+                }    
+                else{
+                    
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="grammer.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+                document.getElementById("story").style.fontSize="22px"
+                document.getElementById("story").style.backgroundColor="white"
+                if(i<0){
+                    i=0
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                }
+                else{
+                document.getElementById("nextbtn").style.display="inline-block"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+            
+
+    
+    </script>
+        
+    </body>
+</html>
